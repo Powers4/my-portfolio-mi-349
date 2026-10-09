@@ -9,19 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Honk:MORF@15&family=Jost:ital,wght@0,100..900;1,100..900&family=Nabla&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sora:wght@100..800&display=swap"
       rel="stylesheet">
   </head>
   <body>
     <header>
       <div class="header-top">
         <a href="#home">
-          <img
+          <img id="logo"
             src="images-and-videos/IV-Logo.png"
             alt="Powers, IV Logo"
             width="90"></a>
         <a href="#home">
-          <img src="images-and-videos/smile.png" alt="me smiling" width="90"></a>
+          <img id="smile" src="images-and-videos/smile.png" alt="me smiling" width="90"></a>
       </div>
       <nav>
         <ul>
@@ -39,13 +39,14 @@
       </section>
       <section id="about">
         <h2>About</h2>
+        <div class="body-text">
         <p>
           I am an Information Science student at Michigan State University, with
           a passion for design. I have always been enraptured by the concept of
           sending a message through design, whether that be the
-          <a href="https://www.apple.com">Apple</a> Ecosystem and its theme of
+          <a class="inline-link" href="https://www.apple.com">Apple</a> Ecosystem and its theme of
           an elegant, sleek future, or even the homey and welcoming design of an
-          <a href="https://www.applebees.com/en">Applebee's</a>. Both of those
+          <a class="inline-link" href="https://www.applebees.com/en">Applebee's</a>. Both of those
           ideas are communicated expertly and covertly, akin to an art. I want
           to be that artist.
         </p>
@@ -57,22 +58,25 @@
           this previous experience to develope a game on Roblox with several
           peers, learning LuaU along the way.
         </p>
-        <video class="phone" autoplay muted loop width="130">
+        </div>
+        <div class="phone-and-goal">
+          <video class="phone" autoplay muted loop width="170">
           <source
             src="images-and-videos/AstraLife-Video.mp4"
             type="video/mp4">
           Your browser does not support this video.
         </video>
-        <p>
-          My goal is to create impactful designs that resonate with users and
+        <p id="goal">
+          <b>My goal—</b> To create impactful designs that resonate with users and
           make a difference in their lives.
-        </p>
+          </p>
+        </div>
       </section>
       <section id="projects">
         <h2>Projects</h2>
         <article>
           <h3>Roblox Game</h3>
-          <p>
+          <p class="body-text with-h3">
             A social interaction game with a focus on emergent gameplay and
             leisure time with friends. I have found that building in Roblox is
             actually very complex and interesting; they provide you a multitude
@@ -83,7 +87,8 @@
         </article>
         <article>
           <h3>This Portfolio</h3>
-          <p>
+          <div class="body-text with-h3">
+            <p>
             I want to use this portfolio as a baseline to springboard into
             multiple different opportunites, learning how to hone a
             programming-based mindset, and become a self-sustained developer.
@@ -92,11 +97,12 @@
             This portfolio should serve as a showcase of my skills and
             experiences.
           </p>
+          </div>
         </article>
       </section>
       <section id="contact">
         <h2>Contact</h2>
-        <address>
+        <address class="contact-info">
           <p>thorn229@msu.edu</p>
           <p>powersthornton4@gmail.com</p>
         </address>

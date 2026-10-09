@@ -1,31 +1,34 @@
 :root {
   /* https://coolors.co/5f758e-001242-dfa02c-edf5ff-d66b31 */
-  --primary-bg: #DBEAFF;
-  --secondary-bg: #5f758e;
-  --primary-text: #001242;
-  --secondary: #d66b31;
-  --highlight: #001242;
+  --pale-blue: #DBEAFF;
+  --grey-blue: #ABC7E9;
+  --dark-blue: #001242;
+  --bright-orange: #d66b31;
   --super-white: #EDF5FF;
-  --page-margin: 2rem;
+  --tannish: #c49b6d;
+  --page-margin: 5rem;
+  font-size: 16px;
 }
 
 /* e1874c */
 
+/* GENERAL STYLES */
 body {
-  background-color: var(--primary-bg);
-  color: var(--primary-text);
+  background-color: var(--pale-blue);
+  color: var(--dark-blue);
   padding: 0;
   margin: 0;
   font-family: "Nunito", Times, serif;
 }
 
 main {
-  margin: var(--page-margin);
+  margin: 3rem var(--page-margin);
 }
 
+/* HEADER */
 header {
-  background: linear-gradient(#efc16b, #001242);
-  color: var(--primary-text);
+  background: linear-gradient(var(--bright-orange), var(--dark-blue) 47%);
+  color: var(--dark-blue);
   /* display: flex;
   flex-direction: column;
   align-items: stretch; */
@@ -43,9 +46,16 @@ header {
 header img {
   display: block;
 }
+#logo {
+  border-radius: 0 0 1.3rem 0;
+}
+#smile {
+  border-radius: 0 0 0 1.3rem;
+}
 
+/* NAVIGATION */
 nav ul {
-  background-color: var(--highlight);
+  background-color: var(--dark-blue);
   display: flex;
   justify-content: center;
   gap: 6rem;
@@ -64,21 +74,96 @@ nav ul li a {
   cursor: pointer;
 }
 
+/* LINK HOVERAGE */
+.inline-link {
+  color: var(--bright-orange);
+  text-decoration: none;
+}
+.inline-link:hover, nav ul li a:hover {
+  color: var(--tannish);
+}
+
+/* FONTS */
+h2, #hero {
+  font-family: "Jost", Times, sans-serif;
+}
+
+h3, #goal, b {
+  font-family: "Sora", Times, sans-serif;
+}
+
+h3, #goal {
+  background: var(--super-white);
+}
+
+/* Phone Adjustment */
 .phone {
   display: block;
   background-color: #383f51;
   padding: 0.3rem;
   border-radius: 1.1rem;
+  margin: auto 0 auto;
 }
 
 h2 {
-  font-size: 2em;
-  font-family: "Jost", Times, serif;
+  font-size: 3em;
+  padding: 0;
+  margin: 1rem 0;
+  border-bottom: 1px solid var(--dark-blue);
 }
+
+/* Slogan */
 #hero {
   font-size: 2.5em;
   text-align: center;
-  font-family: Jost;
+}
+
+h3 {
+  display: inline-block;
+  width: fit-content;
+  text-align: left;
+  font-size: 1.3em;
+  padding: .5em .5em 0;
+  margin: 1rem 0 0;
+  color: var(--bright-orange);
+  background: var(--super-white);
+  border-radius: .5rem .5rem 0 0;
+}
+
+#goal {
+  max-width: 20ch;
+  font-size: 1em;
+  text-align: center;
+  color: var(--tannish);
+  background: var(--super-white);
+  border-radius: 3rem;
+  padding: 1rem;
+}
+
+.phone-and-goal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem 3rem 0;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+.body-text {
+  font-size: 1.05em;
+  max-width: 60ch;
+  margin: 0;
+  background: var(--grey-blue);
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.with-h3 {
+  border-radius: 0 0 1rem 1rem;
 }
 
 p {
@@ -87,8 +172,17 @@ p {
 }
 
 b {
+  color: var(--bright-orange);
   font-weight: bold;
-  font-family: "Honk", Times, serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
+.contact-info {
+  padding: 0;
+}
+
+footer {
+  font-size: 0.8em;
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+}
