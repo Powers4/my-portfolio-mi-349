@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "FAMILY_NAME";
+  src: url(FONT_FILE_NAME.woff2) format("woff2");
+}
+
 :root {
   /* https://coolors.co/c8a27a-8b5e3c-383f51-3c4f76-dff8eb */
   --primary-bg: #dff8eb;
@@ -8,15 +13,37 @@
   --page-margin: 2rem;
 }
 
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+  padding: 0;
+  margin: 0;
+  font-family: "Nunito", Times, serif;
+}
+
+main {
+  margin: var(--page-margin);
+}
+
 header {
   background-color: var(--secondary-bg);
   color: var(--primary-text);
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: stretch; */
   border-radius: 0 0 5rem 5rem / 0 0 1.3rem 1.3rem;
   padding: 0;
   margin: 0;
+}
+
+.header-top {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+header img {
+  display: block;
 }
 
 nav ul {
@@ -30,14 +57,40 @@ nav ul {
   border-radius: 0 0 5rem 5rem / 0 0 1.3rem 1.3rem;
 }
 
-body {
-  background-color: var(--primary-bg);
-  color: var(--primary-text);
-  padding: 0;
-  margin: 0;
-  font-family: "Times New Roman", Times, serif;
+nav ul li a {
+  color: var(--primary-bg);
+  text-decoration: none;
+  font-size: 1.8em;
+  padding: 1rem 2rem;
+  display: inline-block;
+  cursor: pointer;
 }
 
-main {
-  margin: var(--page-margin);
+.phone {
+  display: block;
+  background-color: #383f51;
+  padding: 0.3rem;
+  border-radius: 1.1rem;
 }
+
+h2 {
+  font-size: 2em;
+  font-family: "Jost", Times, serif;
+}
+#hero {
+  font-size: 2.5em;
+  text-align: center;
+  font-family: Jost;
+}
+
+p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+b {
+  font-weight: bold;
+  font-family: "Honk", Times, serif;
+  font-size: 1.2em;
+}
+
