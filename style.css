@@ -69,7 +69,8 @@ nav ul li a {
 }
 
 /* Inline link distinction and hover effects */
-.inline-link, .astra-life {
+.inline-link,
+.astra-life {
   color: var(--bright-orange);
   text-decoration: none;
 }
@@ -88,12 +89,45 @@ main {
 #about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
 }
 #projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.6em;
+  margin: 0 auto;
 }
+
+/* Using #luau-logo, overlay the logo on top of the Roblox Game paragraph, without using HTML. Make the logo 50% transparent, with a top-left to bottom-right diagonal fade to 100% transparency. */
+
+/* Styled #luau-logo in style.css to overlay the Roblox Game paragraph at 50% opacity, fading to fully transparent diagonally from top-left to bottom-right. No HTML was changed. git diff --check passed. */
+
+/* I'm pretty sure this just slams the logo on top of the webpage, so I'm going to keep the opacity parameters and comment the rest. */
+/* #projects > article:first-of-type {
+  position: relative;
+} */
+.roblox-luau {
+  display: grid;
+  width: fit-content;
+}
+#roblox-game-text {
+  grid-column: 1;
+  grid-row: 1;
+}
+#luau-logo {
+  /* position: absolute;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 1; */
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  justify-self: end;
+  opacity: 0.3;
+  -webkit-mask-image: linear-gradient(to bottom right, #000, transparent);
+  mask-image: linear-gradient(to bottom right, #000, transparent);
+}
+
 /* Font change for any h2's and the Hero */
 h2,
 #hero {
