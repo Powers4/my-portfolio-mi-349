@@ -12,74 +12,63 @@
 
 /* e1874c */
 
-/* GENERAL STYLES */
+/* General styling, Nunito font family for the whole doc, 0 padding 0 margin, background a neutral pale blue */
 body {
-  background-color: var(--pale-blue);
-  color: var(--dark-blue);
+  display: grid;
+  background: var(--pale-blue);
   padding: 0;
   margin: 0;
   font-family: "Nunito", Times, serif;
 }
 
-main {
-  margin: 3rem var(--page-margin);
-}
-
-/* HEADER */
+/* Header section, includes the top bar with logo and smile image, as well as the navigation bar */
 header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   background: linear-gradient(var(--bright-orange), var(--dark-blue) 47%);
   color: var(--dark-blue);
-  /* display: flex;
-  flex-direction: column;
-  align-items: stretch; */
   border-radius: 0 0 5rem 5rem / 0 0 1.3rem 1.3rem;
   padding: 0;
   margin: 0;
 }
 
-.header-top {
-  display: block;
-  justify-content: space-between;
-  text-align: center;
-  /* display: flex; */
+.left-side {
+  justify-self: start;
 }
-
-header img {
-  display: inline-block;
+.right-side {
+  justify-self: end;
 }
-#logo, #smile {
-  border-radius: 0 0 1.3rem 1.3rem;
+#logo {
+  border-radius: 0 0 1.3rem 0;
 }
-/* #smile {
+#smile {
   border-radius: 0 0 0 1.3rem;
-} */
+}
 
-/* NAVIGATION */
+/* Navigation bar, includes the list of links with a dark blue background and rounded corners */
+nav {
+grid-column: 1/3;
+}
 nav ul {
+  display: grid;
+  width: fit-content;
+  grid-template-columns: repeat(3, 1fr);
   background-color: var(--dark-blue);
-  display: block;
-  /* display: flex; 
-  justify-content: center; */
-  text-align: center;
-  gap: 6rem;
-  list-style: none;
   padding: 1rem 0 1rem;
-  margin: 0;
+  margin: 0 auto;
   border-radius: 0 0 5rem 5rem / 0 0 1.3rem 1.3rem;
 }
-nav ul li {
-  display: inline-block;
-}
+
+/* The navigation links, made white and increased size*/
 nav ul li a {
   color: var(--super-white);
   text-decoration: none;
-  font-size: 1.8em;
+  font-size: 2rem;
   padding: 1rem 2rem;
-  /* display: inline-block; */
   cursor: pointer;
 }
 
-/* LINK HOVERAGE */
+/* Inline link distinction and hover effects */
 .inline-link {
   color: var(--bright-orange);
   text-decoration: none;
@@ -89,36 +78,54 @@ nav ul li a:hover {
   color: var(--tannish);
 }
 
-/* FONTS */
+/* A small margin for the main content, makes the stuff not touch the walls */
+main {
+  display: grid;
+  margin: 3rem var(--page-margin);
+}
+
+#about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+#projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+/* Font change for any h2's and the Hero */
 h2,
 #hero {
   font-family: "Jost", Times, sans-serif;
 }
 
+/* Font change for any h3's, the goal, and any bold text */
 h3,
 #goal,
 b {
   font-family: "Sora", Times, sans-serif;
 }
 
+/* Background for h3's and the goal */
 h3,
 #goal {
   background: var(--super-white);
 }
 
-/* Phone Adjustment */
+/* Phone stylistic adjustments */
 .phone {
-  display: inline-block;
   background-color: #383f51;
   padding: 0.3rem;
   border-radius: 1.1rem;
   margin: auto 0 auto;
 }
 
+/* H2s */
 h2 {
+  grid-column: 1/3;
   font-size: 3em;
   padding: 0;
   margin: 1rem 0;
+  /*the slim line under any h2 */
   border-bottom: 1px solid var(--dark-blue);
 }
 
@@ -128,8 +135,8 @@ h2 {
   text-align: center;
 }
 
+/* H3s, a box with rounded top corners, makes more use of the orange */
 h3 {
-  display: inline-block;
   width: fit-content;
   text-align: left;
   font-size: 1.3em;
@@ -140,30 +147,24 @@ h3 {
   border-radius: 0.5rem 0.5rem 0 0;
 }
 
+/* Goal, a rounded box with centered text and a tannish color */
 #goal {
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
   max-width: 20ch;
-  font-size: 1em;
+  font-size: 1.5em;
   text-align: center;
   color: var(--tannish);
   background: var(--super-white);
+  border: .16em solid var(--dark-blue);
   border-radius: 3rem;
   padding: 1rem;
-  display: inline-block;
   margin: 0 1rem 0;
 }
 
-.phone-and-goal {
-  display: block;
-  text-align: left;
-  gap: 2rem;
-  margin: 1rem 0;
-}
-
-/* article {
-  display: flex;
-  flex-direction: column;
-} */
-
+/* Body text */
 .body-text {
   font-size: 1.05em;
   max-width: 60ch;
@@ -173,25 +174,33 @@ h3 {
   border-radius: 1rem;
 }
 
+/* Body text with an h3 above it, unrounding the top corners */
 .with-h3 {
   border-radius: 0 0 1rem 1rem;
 }
 
+/* Paragraphs */
 p {
   font-size: 1em;
   line-height: 1.5;
 }
 
+/* Bold text */
 b {
   color: var(--bright-orange);
   font-weight: bold;
   font-size: 1.1em;
 }
-
+/* Goal title? Down here for stacking reasons */
+#goal-text {
+  font-size: 1.7em;
+}
+/* Contact info */
 .contact-info {
   padding: 0;
 }
 
+/* Footer */
 footer {
   font-size: 0.8em;
   text-align: center;

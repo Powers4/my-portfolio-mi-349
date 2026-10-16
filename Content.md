@@ -9,6 +9,8 @@ I have completed multiple internships throughout my academic career, two of whic
 ## Projects
 ### Roblox Game
 A social interaction game with a focus on emergent gameplay and leisure time with friends
+### AstraLife
+AstraLife is a project I worked on during an internship at Apple, where we were tasked with designing and developing prototypes of deployable app ideas. My team proposed an idea for an Augmented Reality social application, AstraLife,where users could virtually customize their environment and interact with others in their local community.
 ### This Portfolio
 I want to use this portfolio as a baseline to springboard into multiple different opportunites, learning how to hone a programming-based mindset, and become a self-sustained developer
 

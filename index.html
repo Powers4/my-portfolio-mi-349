@@ -1,28 +1,34 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The start of something great">
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The start of something great" />
+    <link rel="stylesheet" href="style.css" />
     <title>Powers, IV</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sora:wght@100..800&display=swap"
-      rel="stylesheet">
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <div class="header-top">
-        <a href="#home">
-          <img id="logo"
-            src="images-and-videos/IV-Logo.png"
-            alt="Powers, IV Logo"
-            width="90"></a>
-        <a href="#home">
-          <img id="smile" src="images-and-videos/smile.png" alt="me smiling" width="90"></a>
-      </div>
+      <a href="#home" class="left-side">
+        <img
+          id="logo"
+          src="images-and-videos/IV-Logo.png"
+          alt="Powers, IV Logo"
+          width="90"
+      /></a>
+      <a href="#home" class="right-side">
+        <img
+          id="smile"
+          src="images-and-videos/smile.png"
+          alt="me smiling"
+          width="90"
+      /></a>
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
@@ -39,38 +45,32 @@
       </section>
       <section id="about">
         <h2>About</h2>
-        <div class="body-text">
-        <p>
-          I am an Information Science student at Michigan State University, with
-          a passion for design. I have always been enraptured by the concept of
-          sending a message through design, whether that be the
-          <a class="inline-link" href="https://www.apple.com">Apple</a> Ecosystem and its theme of
-          an elegant, sleek future, or even the homey and welcoming design of an
-          <a class="inline-link" href="https://www.applebees.com/en">Applebee's</a>. Both of those
-          ideas are communicated expertly and covertly, akin to an art. I want
-          to be that artist.
-        </p>
-        <p>
-          I have completed multiple internships throughout my academic career,
-          two of which being coding training under Apple; we were tasked with
-          designing and developing prototypes of deployable app ideas, while
-          learning Apple's programming language, Swift. I am currently using
-          this previous experience to develope a game on Roblox with several
-          peers, learning LuaU along the way.
-        </p>
-        </div>
-        <div class="phone-and-goal">
-          <video class="phone" autoplay muted loop width="170">
-          <source
-            src="images-and-videos/AstraLife-Video.mp4"
-            type="video/mp4">
-          Your browser does not support this video.
-        </video>
-        <p id="goal">
-          <b>My goal—</b> To create impactful designs that resonate with users and
-          make a difference in their lives.
+        <article class="body-text">
+          <p>
+            I am an Information Science student at Michigan State University,
+            with a passion for design. I have always been enraptured by the
+            concept of sending a message through design, whether that be the
+            <a class="inline-link" href="https://www.apple.com">Apple</a>
+            Ecosystem and its theme of an elegant, sleek future, or even the
+            homey and welcoming design of an
+            <a class="inline-link" href="https://www.applebees.com/en"
+              >Applebee's</a
+            >. Both of those ideas are communicated expertly and covertly, akin
+            to an art. I want to be that artist.
           </p>
-        </div>
+          <p>
+            I have completed multiple internships throughout my academic career,
+            two of which being coding training under Apple; we were tasked with
+            designing and developing prototypes of deployable app ideas, while
+            learning Apple's programming language, Swift. I am currently using
+            this previous experience to develope a game on Roblox with several
+            peers, learning LuaU along the way.
+          </p>
+        </article>
+        <p id="goal">
+          <b id="goal-text">My goal—</b> To create impactful designs that resonate with users
+          and make a difference in their lives.
+        </p>
       </section>
       <section id="projects">
         <h2>Projects</h2>
@@ -86,17 +86,34 @@
           </p>
         </article>
         <article>
+          <h3>AstraLife</h3>
+          <p class="body-text with-h3">
+            AstraLife is a project I worked on during an internship at Apple,
+            where we were tasked with designing and developing prototypes of
+            deployable app ideas. My team proposed an idea for an Augmented
+            Reality social application, AstraLife,where users could virtually customize
+            their environment and interact with others in their local community.
+          </p>
+          <video class="phone" autoplay muted loop width="170">
+          <source
+            src="images-and-videos/AstraLife-Video.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support this video.
+        </video>
+        </article>
+        <article>
           <h3>This Portfolio</h3>
           <div class="body-text with-h3">
             <p>
-            I want to use this portfolio as a baseline to springboard into
-            multiple different opportunites, learning how to hone a
-            programming-based mindset, and become a self-sustained developer.
-          </p>
-          <p>
-            This portfolio should serve as a showcase of my skills and
-            experiences.
-          </p>
+              I want to use this portfolio as a baseline to springboard into
+              multiple different opportunites, learning how to hone a
+              programming-based mindset, and become a self-sustained developer.
+            </p>
+            <p>
+              This portfolio should serve as a showcase of my skills and
+              experiences.
+            </p>
           </div>
         </article>
       </section>
