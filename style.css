@@ -108,7 +108,9 @@ b {
 }
 
 /* Copilot Prompt: Make the phone and goal not overlap in the grid cell; Place the goal stacked above the phone with about 1.5em space between them */
+
 /* Return: Wrapped the goal and phone video in a right-column container and stacked them vertically with a 1.5em gap. Both remain centered, and the goal’s text alignment is unchanged. git diff --check passed. */
+
 /* I used Copilot here because I wasn't sure if there were a better way to achieve this layout without using a <div> flexbox container. Turns out, Copilot thought the same */
 .phone-and-goal {
   grid-column: 2;
@@ -221,4 +223,56 @@ footer {
   font-size: 0.8em;
   text-align: center;
   font-family: "Times New Roman", Times, serif;
+}
+
+/* Copilot Prompt: Add media queries that change the grid layouts to whether you're using a phone vs pc. Don't touch the HTML! You are allowed to move around any existing code if you need to place it in the query. */
+
+/* Return: Added a mobile breakpoint at 700px in style.css. On smaller screens, the About and Projects grids switch to one column, the goal-and-phone group moves into that column, and the navigation and text sizing adapt for narrow widths. Desktop layouts remain unchanged.
+No HTML was changed. git diff --check passed. */
+@media (max-width: 700px) {
+  :root {
+    --page-margin: 1rem;
+  }
+
+  main {
+    margin: 2rem var(--page-margin);
+  }
+
+  #about,
+  #projects {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+
+  #about > h2,
+  #projects > h2 {
+    grid-column: 1;
+  }
+
+  .phone-and-goal {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .body-text {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  nav ul {
+    width: 100%;
+    box-sizing: border-box;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 0.75rem 0.25rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  #hero {
+    font-size: 1.8em;
+  }
 }
