@@ -47,7 +47,7 @@ header {
 
 /* Navigation bar, includes the list of links with a dark blue background and rounded corners */
 nav {
-grid-column: 1/3;
+  grid-column: 1/3;
 }
 nav ul {
   display: grid;
@@ -69,12 +69,13 @@ nav ul li a {
 }
 
 /* Inline link distinction and hover effects */
-.inline-link {
+.inline-link, .astra-life {
   color: var(--bright-orange);
   text-decoration: none;
 }
 .inline-link:hover,
-nav ul li a:hover {
+nav ul li a:hover,
+.astra-life:hover {
   color: var(--tannish);
 }
 
@@ -91,6 +92,7 @@ main {
 #projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 0.6em;
 }
 /* Font change for any h2's and the Hero */
 h2,
@@ -105,6 +107,18 @@ b {
   font-family: "Sora", Times, sans-serif;
 }
 
+/* Copilot Prompt: Make the phone and goal not overlap in the grid cell; Place the goal stacked above the phone with about 1.5em space between them */
+/* Return: Wrapped the goal and phone video in a right-column container and stacked them vertically with a 1.5em gap. Both remain centered, and the goal’s text alignment is unchanged. git diff --check passed. */
+/* I used Copilot here because I wasn't sure if there were a better way to achieve this layout without using a <div> flexbox container. Turns out, Copilot thought the same */
+.phone-and-goal {
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
 /* Background for h3's and the goal */
 h3,
 #goal {
@@ -116,7 +130,7 @@ h3,
   background-color: #383f51;
   padding: 0.3rem;
   border-radius: 1.1rem;
-  margin: auto 0 auto;
+  margin: 0;
 }
 
 /* H2s */
@@ -127,6 +141,9 @@ h2 {
   margin: 1rem 0;
   /*the slim line under any h2 */
   border-bottom: 1px solid var(--dark-blue);
+}
+h2.projects-title {
+  margin-top: 0.5rem;
 }
 
 /* Slogan */
@@ -149,8 +166,6 @@ h3 {
 
 /* Goal, a rounded box with centered text and a tannish color */
 #goal {
-  align-self: center;
-  justify-self: center;
   display: flex;
   flex-direction: column;
   max-width: 20ch;
@@ -158,7 +173,7 @@ h3 {
   text-align: center;
   color: var(--tannish);
   background: var(--super-white);
-  border: .16em solid var(--dark-blue);
+  border: 0.16em solid var(--dark-blue);
   border-radius: 3rem;
   padding: 1rem;
   margin: 0 1rem 0;
@@ -166,6 +181,7 @@ h3 {
 
 /* Body text */
 .body-text {
+  align-self: start;
   font-size: 1.05em;
   max-width: 60ch;
   margin: 0;
